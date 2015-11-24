@@ -1,0 +1,286 @@
+// Z-INDEX RESERVED RANGES
+// 000-099 base images like board
+// 200-299-player select
+// 300-399 instructions/help
+// 2000-2099 universal UI
+//
+// 0 board
+// 10 overlay
+//
+//
+$minWidth_page: 1153.6px;
+$minHeight_page: 577px;
+$width_page: 1153.6px;
+$height_page: 577px;
+//
+//
+//
+body {
+  background-color: black;
+}
+
+#gameWrapper {
+  position: relative;
+}
+//
+// UI - UNIVERSAL COMPONENTS
+#board {
+  position: absolute;
+  min-width: $minWidth_page;
+  min-height: $minHeight_page;
+  width: $width_page;
+  height: $height_page;
+  z-index: 0;
+}
+
+#overlayContainer {
+  min-width: $minWidth_page;
+  min-height: $minHeight_page;
+  width: $width_page;
+  height: $height_page;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#overlay_message {
+  display: none;
+  min-width: $minWidth_page;
+  min-height: $minHeight_page;
+  width: $width_page;
+  height: $height_page;
+  z-index: 200;
+}
+
+#messageAlert {
+  text-align: center;
+  font-size: 25px;
+  display: none;
+  position: absolute;
+  width: 550px;
+  height: 114px;
+  top: 231.5px;
+  left: 302px;
+  z-index: 203;
+  background-color: rgba(57, 21, 21, 0.64);
+  color: white;
+}
+
+#alertBkgd {
+  display: none;
+  position: absolute;
+  min-width: $minWidth_page;
+  min-height: $minHeight_page;
+  width: $width_page;
+  height: $height_page;
+  background-color: rgba(0, 0, 0, 0.86);
+  z-index: 202;
+}
+#btn_yes {
+  font-size: 25px;
+  display: none;
+  position: absolute;
+  left: 300px;
+  width: 200px;
+  height: 50px;
+  top: 350px;
+  background-color: rgb(156, 0, 0);
+  z-index: 203;
+}
+
+#btn_no {
+  font-size:25px;
+  display: none;
+  position: absolute;
+  left: 654px;
+  width: 200px;
+  height: 50px;
+  top: 350px;
+  background-color: rgb(156, 0, 0);
+  z-index: 203;
+}
+
+.moveButtonsContainer {
+  position: absolute;
+  left: 1000px;
+  top: 400px;
+  z-index: 2050;
+
+}
+.moveButton {
+  display: none;
+  font-size: 9px;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  color: white;
+  background-color: grey;
+}
+
+#moveRight {
+  left: 50px;
+}
+
+#moveLeft {
+  left: -50px;
+}
+#moveUp {
+  top: -50px;
+}
+
+#moveDown {
+  top: 50px;
+}
+#selectedActionDisplay {
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 517px;
+  left: 0px;
+  width: $width_page;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.21);
+  z-index: 210;
+}
+#selectedActionDisplay p{
+  position: relative;
+  top: -25px;
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+}
+//
+//
+#overlay_playerSelect {
+  display: none;
+  min-width: $minWidth_page;
+  min-height: $minHeight_page;
+  width: $width_page;
+  height: $height_page;
+
+}
+
+.playerSelect {
+  position: absolute;
+  width: 443px;
+  height: 282px;
+  top: 147px;
+  color: white;
+  font-size: 25px;
+  background-color: rgba(0, 62, 64, 0.51);
+}
+
+#playerSelect1 {
+  left: 100px;
+}
+
+#playerSelect2 {
+  left: 604px;
+}
+
+#btn_playerReady1 {
+  position: absolute;
+  left: 100px;
+  width: 200px;
+  height: 50px;
+  top: 350px;
+  background-color: rgb(156, 0, 0);
+}
+
+#btn_playerReady2 {
+  position: absolute;
+  left: 604px;
+  width: 200px;
+  height: 50px;
+  top: 350px;
+  background-color: rgb(156, 0, 0);
+}
+
+#btn_play {
+  font-size:25px;
+  display: none;
+  position: absolute;
+  left: 470px;
+  width: 200px;
+  height: 50px;
+  top: 450px;
+  background-color: rgb(156, 0, 0);
+  z-index: 200;
+}
+
+#overlay_instructions {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  min-width: $minWidth_page;
+  min-height: $minHeight_page;
+  width: $width_page;
+  height: $height_page;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: rgb(255, 255, 255);
+  z-index: 300;
+}
+
+#overlay_instructions h1{
+  font-size: 50px;
+}
+
+#overlay_instructions p {
+  font-size: 30px
+}
+
+#actionsDeck{
+  position: absolute;
+  font-size: 25px;
+  width: 250px;
+  height: 400px;
+  top: 600px;
+  left: 50px;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  z-index: 2010;
+}
+
+.actionCard{
+  // start with display none and pos absolute
+  // then display block and pos absolute
+  // then display inline when transfered to hand
+  display: none;
+  position: absolute;
+  font-size: 25px;
+  width: 100px;
+  height: 200px;
+  margin:20px;
+  top: 10px;
+  left: 10px;
+  background-color: rgb(99, 97, 97);
+  color: rgba(0, 0, 0, 0);
+  // -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  // -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  // box-shadow:         3px 3px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+#currentHand{
+  position: absolute;
+  font-size: 25px;
+  width: 750px;
+  height: 400px;
+  top: 600px;
+  left: 350px;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  float: left;
+  z-index: 2010;
+}
+#currentHand h1{
+  color: white;
+  z-index: 2011;
+}
+
+.stats{
+  display: block;
+  position: relative;
+  width: 125px;
+  height: 50px;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.3);
+}

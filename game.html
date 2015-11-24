@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Skirmish</title>
+    <link rel="stylesheet" href="style/style.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div id="gameWrapper">
+      <div id="overlayContainer">
+        <!-- universal UI -->
+        <div id="overlay_message">
+          <div id="alertBkgd"></div>
+          <div class="message" id="messageAlert"></div>
+          <div id="btn_yes">YES</div>
+          <div id="btn_no">NO</div>
+        </div>
+        <!-- player select -->
+        <div id="overlay_playerSelect">
+          <div class="playerSelect" id="playerSelect1"> PLAYER 1 READY?</div>
+          <div class="playerSelect" id="playerSelect2"> PLAYER 2 READY?</div>
+          <div id="btn_playerReady1">READY?</div>
+          <div id="btn_playerReady2">READY?</div>
+          <div id="btn_play">PLAY NOW!</div>
+        </div>
+          <div id="overlay_instructions">
+            <h1>Game Instructions</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div id="closeInstructions">(CLICK TO CLOSE)</div>
+          </div>
+      </div>
+      <div class="ui">
+        <div id="actionsDeck">ACTIONS DECK</div>
+        <div id="currentHand"><h1>CURRENT HAND</h1></div>
+        <div id="selectedActionDisplay"><p></p></div>
+        <div class="moveButtonsContainer">
+          <div class="moveButton" id="moveRight">RIGHT</div>
+          <div class="moveButton" id="moveLeft">LEFT</div>
+          <div class="moveButton" id="moveUp">UP</div>
+          <div class="moveButton" id="moveDown">DOWN</div>
+        </div>
+        <div id="log" style="color: white"></div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    </div>
+  </body>
+
+  <script type="text/javascript" src='../jquery/jquery-2.1.4.min.js'></script>
+  <script type="text/javascript" src='script/01_namespaces.js'></script>
+  <script type="text/javascript" src='script/ui.js'></script>
+  <script type="text/javascript" src='script/units.js'></script>
+  <script type="text/javascript" src='script/game.js'></script>
+  <script type="text/javascript" src='script/game_controller.js'></script>
+
+
+</html>
